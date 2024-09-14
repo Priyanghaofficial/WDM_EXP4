@@ -39,14 +39,15 @@ for group, condition in age_groups.items():
 ### Visualization:
 ```python
 # Create a list to store counts of visitors in each age group
-/*WRITE YOUR CODE HERE
+visitor_counts=[]
 
 # Count visitors in each age group
-/*WRITE YOUR CODE HERE
+for group,condition in age_groups.items():
+  visitors_in_group=visitor_df[condition]
+  visitor_counts.append(len(visitors_in_group))
     
 # Define age group labels and plot a bar chart
-/*WRITE YOUR CODE HERE
-
+age_group_labels=list(age_groups.keys())
 plt.figure(figsize=(8, 6))
 plt.bar(age_group_labels, visitor_counts, color='skyblue')
 plt.xlabel('Age Groups')
@@ -55,6 +56,8 @@ plt.title('Visitor Distribution Across Age Groups')
 plt.show()
 ```
 ### Output:
+![image](https://github.com/user-attachments/assets/3ca03b06-c4bf-40b1-a0f5-2c1a27b9aaf7)
 
 
 ### Result:
+Thus the cluster and visitor segmentation for navigation patterns was implemented successfully in python.
