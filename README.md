@@ -15,15 +15,26 @@
 
 ### Program:
 ```python
-# Visitor segmentation based on characteristics
 # read the data
-/*WRITE YOUR CODE HERE
+import pandas as pd
+visitor_df = pd.read_csv('/content/clustervisitor.csv')
 
 # Perform segmentation based on characteristics (e.g., age groups)
-/*WRITE YOUR CODE HERE
+age_groups = {
+    'Young': visitor_df['Age'] <= 30,
+    'Middle-aged': (visitor_df['Age'] > 30) & (visitor_df['Age'] <= 50),
+    'Elderly': visitor_df['Age'] > 50
+}
+
+for group, condition in age_groups.items():  
+    visitors_in_group = visitor_df[condition] 
+    print(f"Visitors in {group} age group:")
+    print(visitors_in_group)
+
 
 ```
 ### Output:
+![image](https://github.com/user-attachments/assets/de91190a-6499-4663-be8c-ddb21ff9576e)
 
 ### Visualization:
 ```python
